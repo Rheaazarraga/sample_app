@@ -8,18 +8,17 @@ Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](https://www.michaelhartl.com/).
 
 ## Disclaimer ⚠️
----
+
 This app was created for my own personal learning and is not intended for professional use
 
 ## License
----
 
 All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
 is available jointly under the MIT License and the Beerware License. See
 [LICENSE.md](LICENSE.md) for details.
 
 ## Getting started
----
+
 
 - ⭐️ To get started with the app, clone the repo and then install the needed gems:
 
