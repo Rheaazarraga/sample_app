@@ -14,4 +14,8 @@ class User
   def full_name
     "#{@first_name} #{@last_name}"
   end
+
+  def alphabetical_name
+    "#{@;ast_name}, #{@first_name}"
+  end
 end
