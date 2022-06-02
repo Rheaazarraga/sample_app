@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_acessor :remember_token
   before_save { email.downcase! }
   validates :name, presence: true, length: { maximum: 50 }
 
@@ -20,5 +21,11 @@ class User < ApplicationRecord
   # returns a random token
   def User.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  # remembers a user in the db for use in persistent sessions
+  def remember
+    self.remember_token = User.new_token
+    update_attribute(:remember_digest, User.digest(remember_token))
   end
 end
