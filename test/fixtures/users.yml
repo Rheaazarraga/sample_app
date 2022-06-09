@@ -6,6 +6,6 @@ bita:
   password_digest: <%= User.digest('password') %>
 
 rhea:
-name: Rhea Azarraga
-email: rhea@example.com
-password_digest: <%= User.digest('password') %>
+  name: Rhea Azarraga
+  email: rhea@example.com
+  password_digest: <%= User.digest('password') %>
