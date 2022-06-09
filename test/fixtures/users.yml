@@ -27,6 +27,7 @@ orlin:
 
 <% 30.times do |n| %>
 user_<%= n %>:
-  name: <%= 'User-#{n}@example.com' %>
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
 <% end %>
