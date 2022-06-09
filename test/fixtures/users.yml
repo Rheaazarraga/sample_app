@@ -9,3 +9,24 @@ rhea:
   name: Rhea Azarraga
   email: rhea@example.com
   password_digest: <%= User.digest('password') %>
+
+alex:
+  name: Alex King
+  email: alex@example.com
+  password_digest: <%= User.digest('password') %>
+
+nik:
+  name: Nikocado Avocado
+  email: nik@mukkbang.com
+  password_digest: <%= User.digest('password') %>
+
+orlin:
+  name: Orlin Borlin
+  email: orlin@snorlin.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user <%= n %>
+  name: <%= 'User-#{n}@example.com' %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
