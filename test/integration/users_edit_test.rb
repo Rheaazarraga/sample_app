@@ -36,14 +36,15 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 
   test 'successful edit with friendly forwarding' do
     get edit_user_path(@user)
+    assert_not_nil session[:forwarding_url]
     log_in_as(@user)
     assert_redirected_to edit_user_url(@user)
     name = 'Foo Bar'
     email = 'foo@bar.com'
     patch user_path(@user), params: { user: { name: name,
                                               email: email,
-                                              password: '',
-                                              password_confirmation: ''}  }
+                                              password: 'foobar',
+                                              password_confirmation: 'foobar'}  }
     assert_not flash.empty?
     assert_redirected_to @user
     @user.reload
